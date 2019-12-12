@@ -61,6 +61,9 @@
         const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
         // if a key has no sound associate with it, this stops the function
         if (!audio) return;
+        // allows to play the sound repeatedly with no gap
+        audio.currentTime = 0;
+        audio.play();
       });
     </script>
   </body>
